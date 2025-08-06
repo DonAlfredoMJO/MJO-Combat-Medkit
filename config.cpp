@@ -37,7 +37,6 @@ class CfgMods
 };
 class CfgVehicles
 {
-	class Inventory_Base;
 	class TentBase;
 	class MJO_MedKit_close_Kit: TentBase
 	{
@@ -61,15 +60,13 @@ class CfgVehicles
 				initPhase=1;
 			};
 		};
-		itemBehaviour = 0;
-		allowDamage = 0;
 		class DamageSystem
 		{
 			class GlobalHealth
 			{
 				class Health
 				{
-					hitpoints = 999999;
+					hitpoints = 200;
 					healthLevels[] = {};
 				};
 			};
@@ -80,8 +77,6 @@ class CfgVehicles
 		};			
 		hiddenSelectionsTextures[]=
 		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Heals_co.paa",
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Heals_co.paa",
 			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Heals_co.paa"			
 		};
 		hiddenSelectionsMaterials[]=
@@ -95,53 +90,17 @@ class CfgVehicles
 		displayName = "Combat MedKit";
 		descriptionShort = "The Combat Med Kit is now deployed and will delete itself after use!";
 		model = "MJO_MedicBag_source\data\MJO_MedKit_opened.p3d";		
-		carveNavmesh = 1;
-		forceFarBubble = "true";
-		slopeTolerance = 0.3;
-		weight = 30000;		
-		rotationFlags = 2;
-		yawPitchRollLimit[] = {45,45,45};
-		physLayer = "item_large";
 		itemBehaviour = 0;
-		allowDamage = 0;
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints = 999999;
-					healthLevels[] = {};
-				};
-			};
-		};		
-		hiddenSelections[]=
-		{
-			"camo"
-		};		
-		hiddenSelectionsTextures[]=
-		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Heals_co.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit.rvmat"
-		};		
+		allowDamage = 0;			
 	};
 	class MJO_MedKit_close_bleed_Kit: MJO_MedKit_close_Kit
 	{
 		scope = 2;
 		displayName = "Combat MedKit Kit";
 		descriptionShort = "Once placed, this Med Kit treats up to 6 cuts! Once the timer runs out, the Combat Med Kit deletes itself so use it wisely!";		
-		projectionTypename = "MJO_MedKit_open_bleeds";		
-		hiddenSelections[]=
-		{
-			"camo"
-		};			
+		projectionTypename = "MJO_MedKit_open_bleeds";					
 		hiddenSelectionsTextures[]=
 		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Bleeds_co.paa",
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Bleeds_co.paa",
 			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Bleeds_co.paa"			
 		};	
 	};
@@ -151,18 +110,8 @@ class CfgVehicles
 		displayName = "Combat MedKit";
 		descriptionShort = "The Combat Med Kit is now deployed and will delete itself after use!";
 		model = "MJO_MedicBag_source\data\MJO_MedKit_opened.p3d";			
-		hiddenSelections[]=
-		{
-			"camo"
-		};		
-		hiddenSelectionsTextures[]=
-		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Bleeds_co.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit.rvmat"
-		};		
+		itemBehaviour = 0;
+		allowDamage = 0;		
 	};	
 
 	class MJO_MedKit_close_illness_Kit: MJO_MedKit_close_Kit
@@ -170,16 +119,10 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Combat MedKit Kit";
 		descriptionShort = "Once placed, this Med Kit treats all illnesses! Once the timer runs out, the Combat Med Kit deletes itself so use it wisely!";		
-		projectionTypename = "MJO_MedKit_open_illness";		
-		hiddenSelections[]=
-		{
-			"camo"
-		};			
+		projectionTypename = "MJO_MedKit_open_illness";				
 		hiddenSelectionsTextures[]=
 		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Illness_co.paa",
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Illness_co.paa",
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Illness_co.paa"			
+			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Illness_co.paa"		
 		};	
 	};
 	class MJO_MedKit_open_illness: MJO_MedKit_close_illness_Kit
@@ -187,18 +130,8 @@ class CfgVehicles
 		scope = 1;
 		displayName = "Combat MedKit";
 		descriptionShort = "The Combat Med Kit is now deployed and will delete itself after use!";
-		model = "MJO_MedicBag_source\data\MJO_MedKit_opened.p3d";			
-		hiddenSelections[]=
-		{
-			"camo"
-		};		
-		hiddenSelectionsTextures[]=
-		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit_Illness_co.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"MJO_MedicBag_source\data\MJO_MedKit\MJO_MedKit.rvmat"
-		};		
+		model = "MJO_MedicBag_source\data\MJO_MedKit_opened.p3d";	
+		itemBehaviour = 0;
+		allowDamage = 0;		
 	};	
 };
